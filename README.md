@@ -6,6 +6,7 @@
 `python manage.py createsuperuser`
 `python manage.py runserver`
 `python manage.py startapp <nome_do_app>`
+`python mange.py makemigrations`
 
 `adm controller`
 
