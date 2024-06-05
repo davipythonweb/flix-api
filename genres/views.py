@@ -5,6 +5,8 @@ from genres.models import Genre
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 
+
+"""CRUD PARA API COM DJANGO ORM e FunctionBasedViews"""
 # endpoint listar todos e criar
 @csrf_exempt
 def genre_create_list_view(request):
@@ -20,6 +22,7 @@ def genre_create_list_view(request):
         return JsonResponse({'id': new_genre.id,
                              'name': new_genre.name},
                             status=201,) # mensagem de confirmaçao
+
 
 # endpoint listar por id e update e delete
 @csrf_exempt        
@@ -37,7 +40,7 @@ def genre_detail_view(request, pk):
         return JsonResponse({'id': genre.id, 'name': genre.name}) # mensagem de confirmaçao com novo dado alterado
     
     elif request.method == 'DELETE':
-        genre.delete()
+        genre.delete() # deletando dado
         return JsonResponse({'message': 
             'Gênero excluído com sucesso.'}, status=204,) #sms de exclusao
          
