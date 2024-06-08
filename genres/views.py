@@ -4,6 +4,7 @@ from genres.models import Genre
 
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
+from rest_framework import generics
 
 
 """CRUD PARA API COM DJANGO ORM e FunctionBasedViews"""
