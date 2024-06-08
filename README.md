@@ -1,4 +1,9 @@
-# flix-ap
+# flix-api
+
+`ìnicial`
+
+- CRUD de filmes
+`django_restframework`
 
 - comandos Django/bash
 `django-admin startproject core .`
