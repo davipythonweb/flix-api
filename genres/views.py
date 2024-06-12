@@ -4,10 +4,14 @@ from genres.models import Genre
 
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
+
 from rest_framework import generics
+from genres.serializers import GenreSerializer
 
 
 """CRUD PARA API COM DJANGO ORM e FunctionBasedViews"""
+
+"""
 # endpoint listar todos e criar
 @csrf_exempt
 def genre_create_list_view(request):
@@ -24,13 +28,11 @@ def genre_create_list_view(request):
                              'name': new_genre.name},
                             status=201,) # mensagem de confirmaçao
 
-
-
-"""CRUD PARA API COM DJANGO ORM e ClassBasedViews"""
-# endpoint listar todos e criar
+"""
+# endpoint listar todos e criar COM => ClassBasedViews
 class GenereCreateLIstView(generics.ListCreateAPIView):
     queryset = Genre.objects.all()
-    serializer_class = None
+    serializer_class = GenreSerializer
     
     
 # endpoint listar por id e update e delete

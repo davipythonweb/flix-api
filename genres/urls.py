@@ -8,6 +8,7 @@ app_name = 'namespace'
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('genres/', views.genre_create_list_view, name='list'),
+    path('genres/', views.GenereCreateLIstView.as_view(), name='list'),
+    # path('genres/', views.genre_create_list_view, name='list'),
     path('genres/<int:pk>/',views.genre_detail_view, name='detail'),
 ]
