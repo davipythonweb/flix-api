@@ -7,7 +7,7 @@ class GenresURlsTeste(TestCase):
         url = reverse('namespace:list')
         self.assertEqual(url, '/genres/')
             
-    # teste de url genres de update e delete detail por id 
+    # testando url genres de update e delete por id
     def test_genres_update_delete_is_url_correct(self):
         url = reverse('namespace:detail', kwargs={'pk': 1})
         self.assertEqual(url, '/genres/1/')
