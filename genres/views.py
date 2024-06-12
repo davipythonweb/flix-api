@@ -1,14 +1,28 @@
-import json
-from django.http import JsonResponse
+# import json
+# from django.http import JsonResponse
+# from django.views.decorators.csrf import csrf_exempt
+# from django.shortcuts import get_object_or_404
+
 from genres.models import Genre
-
-from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import get_object_or_404
-
 from rest_framework import generics
 from genres.serializers import GenreSerializer
 
 
+
+"""CRUD PARA API COM DJANGO ORM e ClassBasedViews"""
+    
+# endpoint listar todos e criar COM => ClassBasedViews
+class GenereCreateLIstView(generics.ListCreateAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+# endpoint para listar por id , update e delete COM => ClassBasedViews    
+class GenereRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+    
+    
+    
 """CRUD PARA API COM DJANGO ORM e FunctionBasedViews"""
 
 """
@@ -29,12 +43,8 @@ def genre_create_list_view(request):
                             status=201,) # mensagem de confirmaçao
 
 """
-# endpoint listar todos e criar COM => ClassBasedViews
-class GenereCreateLIstView(generics.ListCreateAPIView):
-    queryset = Genre.objects.all()
-    serializer_class = GenreSerializer
     
-    
+"""    
 # endpoint listar por id e update e delete
 @csrf_exempt        
 def genre_detail_view(request, pk):
@@ -56,5 +66,4 @@ def genre_detail_view(request, pk):
             'Gênero excluído com sucesso.'}, status=204,) #sms de exclusao
          
          
-         
-    
+"""         
