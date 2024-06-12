@@ -24,7 +24,10 @@ def genre_create_list_view(request):
                              'name': new_genre.name},
                             status=201,) # mensagem de confirmaçao
 
-
+"""CRUD PARA API COM DJANGO ORM e ClassBasedViews"""
+class GenereCreateLIstView(generics.ListCreateAPIView):
+    ...
+    
 # endpoint listar por id e update e delete
 @csrf_exempt        
 def genre_detail_view(request, pk):
