@@ -9,7 +9,7 @@ from genres.serializers import GenreSerializer
 
 
 
-"""CRUD PARA API COM DJANGO ORM e ClassBasedViews"""
+"""CRUD PARA API COM DJANGO-REST-FRAMEWORK ORM e ClassBasedViews"""
     
 # endpoint listar todos e criar COM => ClassBasedViews
 class GenereCreateLIstView(generics.ListCreateAPIView):
@@ -22,7 +22,7 @@ class GenereRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = GenreSerializer
     
      
-"""CRUD PARA API COM DJANGO ORM e FunctionBasedViews"""
+"""CRUD PARA API COM DJANGO-REST-FRAMEWORK ORM e FunctionBasedViews"""
 
 """
 # endpoint listar todos e criar
