@@ -33,6 +33,7 @@
 ### usage
 
 - executar scripts powershell
+
 `set-executionpolicy unrestricted`
 
 -runing pytest- rodar no terminal => pytest
