@@ -7,6 +7,15 @@ from rest_framework import generics
 from genres.models import Genre
 from genres.serializers import GenreSerializer
 
+"""
+fluxo de criação dos apps:
+models
+views
+serializers
+urls
+tests
+admin
+"""
 
 
 """CRUD PARA API COM DJANGO-REST-FRAMEWORK ORM e ClassBasedViews"""
