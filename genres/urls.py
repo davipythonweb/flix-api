@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 
-app_name = 'namespace'
+app_name = 'namespaceGenres'
 
 urlpatterns = [
     path('genres/', views.GenereCreateLIstView.as_view(), name='list'),
