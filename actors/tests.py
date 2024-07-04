@@ -10,5 +10,5 @@ class ActorsURlsTeste(TestCase):
             
 #     # testando url actors de update e delete por id
     def test_actors_update_delete_is_url_correct(self):
-        url = reverse('namespaceActors:retrive', kwargs={'pk': 1})
+        url = reverse('namespaceActors:retrieve', kwargs={'pk': 1})
         self.assertEqual(url, '/actors/1/')
