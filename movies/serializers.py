@@ -7,20 +7,20 @@ from movies.models import Movie
 
 # criando serializer na mão, sem o [ModelSerializer] 
 # obs:só funciona GET,não tem metodo create
-
-# class MovieTesteSerializer(serializers.Serializer):
-#     id = serializers.IntegerField()
-#     title = serializers.CharField()
-#     genre = serializers.PrimaryKeyRelatedField(
-#         queryset = Genre.objects.all(),
-#     )
-#     release_date = serializers.DateField()
-#     actors = serializers.PrimaryKeyRelatedField(
-#         queryset = Actor.objects.all(),
-#         many = True,
-#     )
-#     resume = serializers.CharField()
-
+"""
+class MovieTesteSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    title = serializers.CharField()
+    genre = serializers.PrimaryKeyRelatedField(
+        queryset = Genre.objects.all(),
+    )
+    release_date = serializers.DateField()
+    actors = serializers.PrimaryKeyRelatedField(
+        queryset = Actor.objects.all(),
+        many = True,
+    )
+    resume = serializers.CharField()
+"""
 
 class MovieSerializer(serializers.ModelSerializer):
     
