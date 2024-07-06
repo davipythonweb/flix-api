@@ -10,6 +10,9 @@
 - CRUD de filmes
 `django_restframework`
 
+- Autenticação
+`djangorestframework-simplejwt`
+
 - comandos Django/bash
 `django-admin startproject core .`
 `python manage.py migrate`
