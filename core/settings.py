@@ -122,9 +122,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # configuração retirada da documentação do django-rest-framework-simplejwt
 # variavel e ambiente do DRF
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
 }
