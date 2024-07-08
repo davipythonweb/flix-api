@@ -7,6 +7,8 @@ from rest_framework import generics
 from genres.models import Genre
 from genres.serializers import GenreSerializer
 
+from rest_framework.permissions import IsAuthenticated
+
 """
 fluxo de criação dos apps:
 models
@@ -22,11 +24,13 @@ admin
     
 # endpoint listar todos e criar COM => ClassBasedViews
 class GenereCreateLIstView(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
 # endpoint para listar por id , update e delete COM => ClassBasedViews    
 class GenereRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
     

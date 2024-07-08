@@ -5,12 +5,15 @@ from movies.models import Movie
 from movies.serializers import MovieSerializer, MovieListDetailSerializer, MovieStatsSerializer
 from reviews.models import Review
 
+from rest_framework.permissions import IsAuthenticated
+
 # from movies.serializers import MovieTesteSerializer
 
 
 
 # Definição da view para criação e listagem de filmes
 class MovieCreateListView(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Movie.objects.all()  # Consulta para obter todos os filmes
     
     # Método para determinar o serializer a ser usado com base no método HTTP
@@ -22,6 +25,7 @@ class MovieCreateListView(generics.ListCreateAPIView):
 
 # Definição da view para recuperação, atualização e exclusão de um filme específico
 class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Movie.objects.all()  # Consulta para obter todos os filmes
     
     # Método para determinar o serializer a ser usado com base no método HTTP
