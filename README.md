@@ -26,6 +26,10 @@
 *admsuper
 *Adm$50001
 
+`user_teste`
+*cinemark
+*cines@23
+
 </details>
 
 ## pytest
