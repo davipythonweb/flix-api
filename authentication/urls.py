@@ -12,3 +12,4 @@ urlpatterns = [
 
 # token normal= validade 5min
 # refresh-token = validade 24h, pode fazer refresh de 5min em 5 min
+# token = Bearer Token
