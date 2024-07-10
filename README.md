@@ -9,6 +9,8 @@
 
 - CRUD de filmes
 `django_restframework`
+`permissoes admin -> all`
+`permissoes user -> safe_methods= GET, HEAD, OPTIONS`
 
 - Autenticação
 `djangorestframework-simplejwt`

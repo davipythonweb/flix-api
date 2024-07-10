@@ -1,4 +1,4 @@
-from rest_framework import permissions  # Importa a classe base de permissões do Django Rest Framework
+from rest_framework import permissions
 
 class GlobalDefaultPermission(permissions.BasePermission):
     """
@@ -9,6 +9,10 @@ class GlobalDefaultPermission(permissions.BasePermission):
         """
         Verifica se o usuário tem permissão para a ação solicitada.
         """
+        # Permite acesso aos métodos GET, HEAD e OPTIONS para qualquer usuário autenticado
+        if request.method in permissions.SAFE_METHODS:
+            return request.user.is_authenticated
+
         # Obtém o codinome da permissão com base no método HTTP e na view
         model_permission_codename = self.__get_model_permission_codename(request.method, view)
 
