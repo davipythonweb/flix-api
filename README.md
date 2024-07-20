@@ -55,7 +55,7 @@
 
 -usage in postman
 
--via GET
+- via GET
 
 `1) gerar um access-token para o usuario no endpoint:localhost/api/v1/authentication/token/ passando no body:  {"username": "", "password": ""}`
 
