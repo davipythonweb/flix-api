@@ -38,6 +38,7 @@ class GenereRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
     
+    
      
 """CRUD PARA API COM DJANGO-REST-FRAMEWORK ORM e FunctionBasedViews"""
 
